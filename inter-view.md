@@ -29,7 +29,7 @@ JDK (là viết tắt của Java Development Kit) bao gồm JRE và các Develop
    3.1 ArrayList là gì ? Khi nào dùng ArrayList
         - ArrayList: là mảng động, ArrayList dùng khi lưu trữ dữ liệu và lấy dữ liệu
    3.2 LinkedList là gì ? Khi nào dùng Linkedlist
-        - LinkedList: là danh sách liên kết, LinkedList sừ dụng khi muốn thao tác với dữ liệu nhiều: insert, delete, tìm kiếm
+        - LinkedList: là danh sách liên kết, LinkedList sừ dụng khi muốn thao tác với dữ liệu nhiều: insert, delete
    3.3 Vector là gì ? Khi nào dùng Vector?
         - Vector
    3.4 Stack hoạt đông như thế nào ? Khi nào dùng Stack
@@ -59,49 +59,11 @@ JDK (là viết tắt của Java Development Kit) bao gồm JRE và các Develop
    4.1 Sự khác nhau giữa HashMap và HashTable
         - HashMap thì chỉ không có cơ chế đồng bộ, còn HashTable thì có
         - HashMap thì có được lưu giá trị null còn HashTable thì không
-JAVA SPRING
-   1. RequestMapping là gì ??
-        - RequestMapping là một anotation để map các request với class hoặc method được gửi lên từ client
-   2. Phương thức Post và Get khác nhau thế nào
-        - Method Post: không được cache trên trình duyệt, còn Get thì có
-        - Post thì sẽ thực hiện gửi ngầm dữ liệu lên server và không xuất hiện các dữ liệu bảo mật trên url
-       - Post sẽ không giới hạn data gửi lên server, còn Get thì sẽ bị giới hạn số lượng param gửi đi (best practice: tối đa 2048 ký tự )
-   3. Truyền dữ liệu từ Controller qua View bằng gì?
-        - Bằng Dispaster serverlet
-   4. Spring MVC hoạt động như thế nào??
-        - Step 1: Sau khi nhận request từ HTTP, thì Dispastcher Serverlet  sẽ gọi HttpMapping để xác định xem Controller 
-          nào xử lý không
-        - Step 2 Sau khi xác nhận có Controller sẽ xử lý thì HttpMapping sẽ gửi request đến Controller đó
-        - Step 3 Sau khi xử lý trong controller xong,thì controller sẽ thông quan ModelAndView trả về Dispastcher
-        - Step 4 Dispastcher   sẽ tìm View thông qua ViewResolver
-        - Step 5 sau khi tìm xong View thì Thì Dispastcher sẽ trả model vừa nhận được sau khi xử lý nghiệp vụ
-   5. Spring IOC là gì ?? Nguyên lý hoạt động của IOC
-        - IOC là quá trình đảo ngược, giúp thay đổi luồng điều kiện, giúp cho chương trình trở nên linh hoạt hơn
-        - IOC hoạt động dựa trên IOC Container, IOC container sẽ tạo ra các đối tượng lắp ráp lại với nhau, cấu hình các đối tượng và 
-        quản lý vong đời của chúng từ lúc tạo ra đến khi kết thúc
-        - Spring Container là dùng DI để quản lý các đối tượng, các đối tượng này gọi là spring bean
-   6. Vòng đời của Spring Bean như thế nào ??
-        - IOC Container tìm thấy bean cần quản lý thì sẽ khởi tạo Contructor
-        - Sau đó inject bean bằng Setter 
-        - Đánh dấu hàm PostContructor
-        - Tiến hành xử lý trong PostContructor được gọi 
-        - Bean sẵn sàng hoạt động
-        - Nếu IOC Container không quản lý bean thí bean sẽ desrtoy
-        - Xoá bean
-   7. Khái niệm DI (dependency injection) trong spring boot là gì?, DIP là gì, Cho ví dụ minh hoạ
-        - DI là một dạng thực hiện của IOC khi inject module này vào 1 module khác và nhằm loại bỏ việc hard-code, 
-          dễ dàng cho việc mở rộng code
-        - IOC là một design pattern nhắm thực hiện việc code sao cho tuân thủ nguyên tắc DIP(Dependence Inversion Price) trong OOP
-        - Ví dụ: Khi một ứng dụng tương tác với nhiều loại db chẳng hạn, thì nếu không sử dụng DI thì chúng ta sẽ phải check khi 
-          nào dùng loại db nào. Khi áp dụng kỹ thuật DI thì bài toán được giải quyết. 
-          giải quyết là chúng ta tạo 1 abstract method rồi cho các đối tượng khác kế thừa lại abstraction method đó. 
-          Vậy việc Thay thế AbstractionDao bắng các lớp Dao khác chính là kỹ thuật DI
-        - DIP là một nguyên lý phát triển trong SOLID của OOP.
-   8. AOP là gì ? Cho ví dụ minh hoạ
-        - AOP là lập một phương pháp lâp trình hướng khía cạnh, là một kỹ thuật lập trình nhắm phân tách chương trình thành những 
-        module riêng biệt, không phụ thuộc vào nhau.
-        - Ví dụ: 
-            - Việc viêt code log trong mỗi method, thì chúng ta thấy rằng việc Viết Log này không ảnh hưởng gì đến module đang chạy cả
+   4.2. Tại sao Set thì không thể duplicate phần tử được.
+        - Vì khi bạn set phần tử trung vào trong set thì bản chất phần tử đó không thay đổi
+   4.3. Tại sao Hastable không thể chứa key và giá trị null được ??
+        - Vì null không phải là 1 đối tượng, nên Hashtable không thể gọi function .equals() hoặc hashCode được.
+        Chính vì thế mà Hashtable không thể tính toán một mảng băng để sử dụng nó làm khoá được.
 
 JPA
     1. Giải thích JPA là gì ?
@@ -167,43 +129,7 @@ JPA VÀ HIBERNATE KHÁC GÌ NHAU:
     - Liskov Substitution Principle: Class con có thể thay thế class cha, nhưng không làm thay đổi tính đúng đắn của chương trình
     - Interface Segregation Principle: Thay vì dùng 1 interface lớn, thì chúng ta tách ra làm các interface nhỏ 
     - Dependency inversion principle: Các module cấp cao không nên phụ thuộc vào các module cấp thấp 
-            
-DATABASE 
-    1 Các loại join
-        1. Inner Join là trả về các record data khi có 1 một sự phù hợp ở 2 bảng
-        2. outer join là trả về tất cả các bản ghi đúng với 1 trong các bảng 
-        3. left join là trả về các bản ghi từ bảng bên trái và các bản ghi đúng với điều kiện bảng bên phải
-        4. right join là trả về các bản ghi từ bảng bên phải và các bản ghi đúng với điều kiện ở bảng bên trái
-    2. Index :
-        - Index là một cấu trúc dữ liệu được dùng để định vị và truy vấn dữ liệu nhanh nhất
-        - Các loại index:
-            - B-Tree Index: là cấu trúc dữ liệu dựa trên thuật toán Binery search là các giá trị đã được sắp xếp 
-            tăng dần theo chiều từ trái sang phải
-            - Hash Index: là cấu trúc dữ liệu dựa trên giải thuật HashMap, HashIndex sẽ dùng mảng băm để phần biệt
-        - Khi nào thì dùng B-TREE và Hash
-            - HASH INDEX nên được dùng trong các biểu thức toán tử là = hoặc <>
-        - Dùng Index thế nào cho tối ưu
-            + Nên đánh Index những cột được dùng trong where, OrderBy
-            + Không nên đánh index cho các bảng thường xuyên update và insert
-            + Không nên đánh index cột nào thường xuyên bị thay đổi
-    3. Sự khác nhau giữa function và store procedure là gì ??
-        - SP thì lưu trữ giá trị trả về là zero, một hoặc nhiều giá trị, còn function chỉ trả về 1 giá trị duy nhất
-        - SP có tham số đầu vào và tham số đầu ra, còn function chỉ có tham số đầu vào 
-        - SP không thể dùng được trong mệnh đề select, trong điều kiện where hoặc having.
-        - SP không thể gọi 1 function, còn 1 function có thể gọi SP
-    4. Sự khác nhau giữa SP và trigger
-        - SP là những câu sql, nhằm thực thì một nhiệm vụ nhất định khi được gọi, còn trigger là một SP được tự động thực thi dựa trên
-        điều kiện được đăng ký sẵn với database
-        - Một trigger không thể gọi 1 trigger khác, còn SP thì có thể gọi 1 SP khác
-        - Trigger thì không có giá trị trả về hoặc tham số đầu vào còn SP thì không
-    3. View
-        - View là gì
-            - View là một bảng ảo dựa trên kết quả truy vấn của câu lệnh Sql, Viw chỉ cho phép đọc dữ liệu ra , chứ không
-            cho phép insert/update dữ liệu
-        - View được tạo ra khi nào
-            - View được tạo ra khi bạn muốn tập trung các data nhất định
-            - Đơn giản hoá việc xử lý dữ liệu 
-            - Customize data
+    
 
 UNIT TEST
     1. Unit Test là gì ?
