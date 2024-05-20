@@ -43,4 +43,24 @@
    module riêng biệt, không phụ thuộc vào nhau.
    - Ví dụ:
    - Việc viêt code log trong mỗi method, thì chúng ta thấy rằng việc Viết Log này không ảnh hưởng gì đến module đang chạy cả
-   
+9. Khác nhau giữa Bean Factory với Application context là gì ?
+   - 
+10. Kể tên một số design partern được sử dụng trong spring:
+   - Singleton pattern
+   - Factory patterns
+
+12. Sự khác biệt giữa @Inject và @Autowired trong Spring Framework là gì? Nên sử dụng cái nào trong điều kiện nào?"
+   12.1. Sự khác nhau:
+      - Source and standards
+         + @Inject là anotation chuẩn của Java Dependency Injection c
+13. Explain the difference between spring @Controller and @RestController annotation
+   - @Controller annotation chỉ ra rằng lớp là một ‘bộ điều khiển’ giống như một bộ điều khiển web, và thường được dùng kết hợp với @RequestMapping
+   - @RestController là một phiên bản đặc biệt của Controller, nó kết hợp giữa Controller và ResponseBody
+14. Sự khác biệt giữa các chú thích @Component, @Repository và @Service trong Spring là gì
+   - @Component: Đăng ký chung cho bean với spring container
+   - @Service: Đăng ký bean với spring container, nhưng đảm nhiệm xử lý logic 
+   - @Repository: Đăng ký bean với spring container, nhưng đảm nhiệm việc giao tiếp với DB
+
+15. ưu điểm khi sử dụng  Transaction trong spring là gì?
+   - Hỗ trợ các giao dịch tường minh
+   - Cung cấp một API đơn giản hơn cho việc quản lý giao dịch theo chương trình so với một số API giao dịch phức tạp
