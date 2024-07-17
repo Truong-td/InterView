@@ -44,3 +44,10 @@ Bài toán 5:
 	- Service Discovery : Để check xem các service có tồn tại hay không
 
 QUẢN LÝ DỮ LIỆU TRONG MICROSERVICES
+
+Rủi ro Khi đối ứng ngay cho đợt 19/04
+1. Sẽ ảnh hưởng đến cả luồng show số tiền hiện tại của user đã và đang mua gói lite plan
+2. Phát sinh nhiều bug và không thể fix kịp cho release 19/04
+3. Thời gian test không đủ để kịp cho ngày 19.04
+
+ https://redmine.famishare.jp/issues/141377: 

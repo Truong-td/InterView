@@ -49,9 +49,8 @@ JDK (là viết tắt của Java Development Kit) bao gồm JRE và các Develop
         - List là một kiểu collection và là Interface dành cho danh sách
         - ArrayList là một mảng động, là một lớp thực thể implement lại List
    3.9 Tại sao Set không thể duplicate
-        - 
-3.8 Sự khác nhau giữa Map và Set
-        - Set chỉ chứa giá trị, còn Map thì chứa key và value
+        - Vì Set lưu trữ các phần tử bằng cách sử dụng HashTable. Mà cấu trúc dữ liệu của HashTable Key-value.
+        Vậy giá trị được truyền vào bởi Set được coi là KEY của HashTable
    3.9 Sự khác nhau giữa HashSet và TreeSet
         - HashSet thì phần tử bên trong thì chưa được sắp xếp, còn TreeSet thì đã được sắp xếp theo thứ tự tăng dần
    4.0 Sự khác nhau giữa HasMap và TreeMap
@@ -64,7 +63,36 @@ JDK (là viết tắt của Java Development Kit) bao gồm JRE và các Develop
    4.3. Tại sao Hastable không thể chứa key và giá trị null được ??
         - Vì null không phải là 1 đối tượng, nên Hashtable không thể gọi function .equals() hoặc hashCode được.
         Chính vì thế mà Hashtable không thể tính toán một mảng băng để sử dụng nó làm khoá được.
+1. Sự khác nhau giữa static và final
 
+1. Biến
+	+ Biến Static có thể thay đổi được giá trị
+	+ Biến final là hằng số không thay đổi được giá trị
+	
+2. Phương thức:
+	+ Phương thức static 
+		+ Thuộc lớp không thuộc đối tượng
+		+ Gọi phương thức static mà không cần khởi tạo đối tượng
+		+ Có thể truy cập biến static và có thể thay đổi được giá trị của nó
+		+ không được kế thừa vì phương thức static thuộc lớp không thuộc đối tượng 
+	+ Phương thức final không thể ghi đè 
+	+ Phương thức final có thể được kế thừa
+3. Khối/lớp
+	+ Khối static:
+		+ Dùng để khởi tạo thành viên dữ liệu static
+		+ Khối static được thực thi trước hàm main
+	+ Lớp final:
+		+ Không thể kế thừa lớp final 
+        
+2. Sự khác nhau giữa abstract class và interface 
+	+ abstract:
+		+ có phương thức abstract không có thân hàm và có phương thức non-abstract
+		+ abstract không hỗ trợ đa kế thừa 
+		+ abstract class có cung cấp cài đặt cụ thể cho phương thức của interface
+	Interface:
+		+ Chỉ có phương thức abstract(java 8 thì có phương thức default và static)
+		+ Hỗ trợ đa kế thừa
+		+ interface không có cài đặt cụ thể cho các phương thức abstract class
 JPA
     1. Giải thích JPA là gì ?
         - JPA (Java Persistence API) là 1 giao diện lập trình ứng dụng Java, nó mô tả cách quản lý các mối quan hệ dữ liệu  
